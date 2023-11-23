@@ -1,0 +1,3 @@
+$$
+x_v^{(\ell + 1)} = f^{(\ell + 1)}_{\theta} \left( x_v^{(\ell)}, \left\{ x_w^{(\ell)} : w \in \mathcal{N}(v) \right\} \right)
+$$

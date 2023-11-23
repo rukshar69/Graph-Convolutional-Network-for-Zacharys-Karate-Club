@@ -9,9 +9,7 @@ We train a **semi-supervised GCN model** on **Zacharys karate club** dataset. We
 This is done by following a simple **neural message passing scheme**, where node features $\mathbf{x}_v^{(\ell)}$ of all nodes $v \in \mathcal{V}$ in a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ are iteratively updated by aggregating localized information from their neighbors $\mathcal{N}(v)$:
 
 
-$$
-x_v^{(\ell + 1)} = f^{(\ell + 1)}_{\theta} \left( x_v^{(\ell)}, \left\{ x_w^{(\ell)} : w \in \mathcal{N}(v) \right\} \right)
-$$
+$x_v^{(\ell + 1)} = $
 
 
 
