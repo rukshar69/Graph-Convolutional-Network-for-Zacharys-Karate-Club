@@ -1,5 +1,5 @@
 # Graph-Convolutional-Network-for-Zacharys-Karate-Club
-We train a **semi-supervised GCN **model** on **Zachary's**** karate club**** dataset. We use the semi-supervised GCN model to predict the community of each node in Zachary's karate club network to predict club members' community.
+We train a **semi-supervised GCN model** on **Zacharys karate club** dataset. We use the semi-supervised GCN model to predict the community of each node in Zachary's karate club network to predict club members' community.
 
 # Introduction: Hands-on Graph Neural Networks
 
@@ -9,7 +9,9 @@ We train a **semi-supervised GCN **model** on **Zachary's**** karate club**** da
 This is done by following a simple **neural message passing scheme**, where node features $\mathbf{x}_v^{(\ell)}$ of all nodes $v \in \mathcal{V}$ in a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ are iteratively updated by aggregating localized information from their neighbors $\mathcal{N}(v)$:
 
 $$
+
 \mathbf{x}_v^{(\ell + 1)} = f^{(\ell + 1)}_{\theta} \left( \mathbf{x}_v^{(\ell)}, \left\{ \mathbf{x}_w^{(\ell)} : w \in \mathcal{N}(v) \right\} \right)
+
 $$
 
 We implement Graph Neural Networks based on the **[PyTorch Geometric (PyG) library](https://github.com/rusty1s/pytorch_geometric)**, an extension library to the popular deep learning framework [PyTorch](https://pytorch.org/).
@@ -218,7 +220,7 @@ We proceed to initialize our final model via `GCN()`, and printing our model pro
 Let's take a look at the node embeddings produced by our GNN.
 Here, we pass in the initial node features `x` and the graph connectivity information `edge_index` to the model and visualize its 2-dimensional embedding.
 
-![embedding](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/embedding.png)
+![initial_node_embedding](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/initial_node_embedding.png)
 
 We can see that our GNN has produced a 2-dimensional embedding for each of the 34 nodes in the karate club network.
 
