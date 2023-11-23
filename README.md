@@ -185,7 +185,7 @@ We can further visualize the graph by converting it to the `networkx` library fo
 
 For this, we will use one of the most simple GNN operators, the **GCN layer** ([Kipf et al. (2017)](https://arxiv.org/abs/1609.02907)), which is defined as
 
-$\mathbf{x}_v^{(\ell + 1)} = \mathbf{W}^{(\ell + 1)} \sum_{w \in \mathcal{N}(v) \, \cup \, \{ v \}} \frac{1}{c_{w,v}} \cdot \mathbf{x}_w^{(\ell)}$
+![gcn_layer](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/gcn_formula.png)
 
 where $\mathbf{W}^{(\ell + 1)}$ denotes a trainable weight matrix of shape `[num_output_features, num_input_features]` and $c_{w,v}$ refers to a fixed normalization coefficient for each edge.
 
