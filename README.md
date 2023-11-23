@@ -259,6 +259,10 @@ As one can see, our 3-layer GCN model manages to linearly separate the communiti
 Comparing graph visualizations of prediction labels and true labels, we find, at the fuzzy border region between label 0 and label 1 (green and blue respectively), some blue label 1 nodes are misclassified as green label 0. Hence, label 1 had less f1-score.
 
 ![predict_true_graph_comparison](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/predict_true_graph_comparison.png)
+
 # References
+
+- [PyTorch Geometric Documentation](https://pytorch-geometric.readthedocs.io/en/latest/)
+- [PyG Official Tutorials](https://pytorch-geometric.readthedocs.io/en/latest/get_started/colabs.html)
 
 
