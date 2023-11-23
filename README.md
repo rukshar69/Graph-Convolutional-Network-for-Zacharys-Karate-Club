@@ -10,8 +10,9 @@ This is done by following a simple **neural message passing scheme**, where node
 
 
 $$
-\mathbf{x}_v^{(\ell + 1)} = f^{(\ell + 1)}_{\theta} \left( \mathbf{x}_v^{(\ell)}, \left\{ \mathbf{x}_w^{(\ell)} : w \in \mathcal{N}(v) \right\} \right)
+x_v^{(\ell + 1)} = f^{(\ell + 1)}_{\theta} \left( x_v^{(\ell)}, \left\{ x_w^{(\ell)} : w \in \mathcal{N}(v) \right\} \right)
 $$
+
 
 
 We implement Graph Neural Networks based on the **[PyTorch Geometric (PyG) library](https://github.com/rusty1s/pytorch_geometric)**, an extension library to the popular deep learning framework [PyTorch](https://pytorch.org/).
