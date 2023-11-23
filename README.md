@@ -4,17 +4,17 @@ We train a **semi-supervised GCN model** on **Zacharys karate club** dataset. We
 # Introduction: Hands-on Graph Neural Networks
 
 
-**Graph Neural Networks (GNNs)** aim to generalize classical deep learning concepts to irregular structured data (in contrast to images or texts).
+**Graph Neural Networks (GNNs)** aim to generalize classical deep learning concepts to irregularly structured data (in contrast to images or texts).
 
 This is done by following a simple **neural message passing scheme**, where node features $\mathbf{x}_v^{(\ell)}$ of all nodes $v \in \mathcal{V}$ in a graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ are iteratively updated by aggregating localized information from their neighbors $\mathcal{N}(v)$:
 
-\[
+$$
 \mathbf{x}_v^{(\ell + 1)} = f^{(\ell + 1)}_{\theta} \left( \mathbf{x}_v^{(\ell)}, \left\{ \mathbf{x}_w^{(\ell)} : w \in \mathcal{N}(v) \right\} \right)
-\]
+$$
 
 We implement Graph Neural Networks based on the **[PyTorch Geometric (PyG) library](https://github.com/rusty1s/pytorch_geometric)**, an extension library to the popular deep learning framework [PyTorch](https://pytorch.org/).
 
-Let's dive into the world of GNNs by looking at a simple graph-structured example, the well-known [**Zachary's karate club network**](https://en.wikipedia.org/wiki/Zachary%27s_karate_club). This graph describes a social network of 34 members of a karate club divided into 4 communities and documents links between members. Here, we are interested in detecting communities that arise from the member's interaction.
+Let's dive into the world of GNNs by looking at a simple graph-structured example, the well-known [**Zachary's karate club network**](https://en.wikipedia.org/wiki/Zachary%27s_karate_club). This graph describes a social network of 34 members of a karate club divided into 4 communities and documents links between members. Here, we are interested in detecting communities that arise from the members' interaction.
 
 To solve the Karate Club community detection problem using GNN, we specifically use **Graph Convolutional Network(GCN)**
 
