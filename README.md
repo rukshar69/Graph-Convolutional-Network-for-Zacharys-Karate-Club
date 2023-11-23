@@ -238,7 +238,7 @@ loss = criterion(out[data.train_mask], data.y[data.train_mask])
 While we compute node embeddings for all of our nodes, we **only make use of the training nodes for computing the loss**.
 Here, this is implemented by filtering the output of the classifier `out` and ground-truth labels `data.y` to only contain the nodes in the `train_mask`.
 
-We train our model and observe how our node embeddings evolve:
+We train our model and observe how our node embeddings evolve. Below is the YouTube video of the training process in action where we can see the evolution of our node embeddings along with the decrease of the loss.
 
 [![training GCN node embeddings](https://img.youtube.com/vi/Q4wh2NlgpSE/0.jpg)](https://www.youtube.com/watch?v=Q4wh2NlgpSE)
 
