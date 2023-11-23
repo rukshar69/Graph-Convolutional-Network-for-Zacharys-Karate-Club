@@ -221,7 +221,26 @@ Here, we pass in the initial node features `x` and the graph connectivity inform
 
 We can see that our GNN has produced a 2-dimensional embedding for each of the 34 nodes in the karate club network.
 
+## Training on the Karate Club Network
 
+But can we do better? Let's look at an example on how to train our network parameters based on the knowledge of the community assignments of 4 nodes in the graph (one for each community):
+
+We make use of a semi-supervised or transductive learning procedure: We simply train against one node per class but are allowed to make use of the complete input graph data.
+
+Training our model is very similar to any other PyTorch model.
+In addition to defining our network architecture, we define a loss criterion (here, [`CrossEntropyLoss`](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)) and initialize a stochastic gradient optimizer (here, [`Adam`](https://pytorch.org/docs/stable/optim.html?highlight=adam#torch.optim.Adam)).
+After that, we perform multiple rounds of optimization, where each round consists of a forward and backward pass to compute the gradients of our model parameters w.r.t. to the loss derived from the forward pass.
+
+Note that our semi-supervised learning scenario is achieved by the following line:
+```
+loss = criterion(out[data.train_mask], data.y[data.train_mask])
+```
+While we compute node embeddings for all of our nodes, we **only make use of the training nodes for computing the loss**.
+Here, this is implemented by filtering the output of the classifier `out` and ground-truth labels `data.y` to only contain the nodes in the `train_mask`.
+
+We train our model and observe how our node embeddings evolve:
+
+[![training GCN node embeddings](https://img.youtube.com/vi/Q4wh2NlgpSE/0.jpg)](https://www.youtube.com/watch?v=Q4wh2NlgpSE)
 
 # References
 
