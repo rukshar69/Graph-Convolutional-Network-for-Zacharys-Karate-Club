@@ -242,6 +242,23 @@ We train our model and observe how our node embeddings evolve. Below is the YouT
 
 [![training GCN node embeddings](https://img.youtube.com/vi/Q4wh2NlgpSE/0.jpg)](https://www.youtube.com/watch?v=Q4wh2NlgpSE)
 
+A graph of the decrease in the loss per epoch can be seen below.
+
+![loss_vs_epoch](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/loss_vs_epoch.png)
+
+Precision, recall, and F1-score for each class label(0,1,2,3)
+
+![score_per_class](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/score_per_class.png)
+
+Distribution of labels for true and predicted classes.
+
+![label_dist](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/label_dist.png)
+
+As one can see, our 3-layer GCN model manages to linearly separate the communities and classifies most of the nodes correctly. The loss has also gradually decreased to a near plateau meaning the training is progressing towards the right direction. The overall *accuracy* is over **82** percent. While looking at the class-based metrics(f1-score, precision, and recall), **label 1** has the least *f1-score* of *75%*. By observing the class distribution of the true and predicted labels in the bar graphs, we can see some of the label 1 points have been classified as label 0.
+
+Comparing graph visualizations of prediction labels and true labels, we find, at the fuzzy border region between label 0 and label 1 (green and blue respectively), some blue label 1 nodes are misclassified as green label 0. Hence, label 1 had less f1-score.
+
+![predict_true_graph_comparison](https://github.com/rukshar69/Graph-Convolutional-Network-for-Zacharys-Karate-Club/blob/main/blog_images/predict_true_graph_comparison.png)
 # References
 
 
